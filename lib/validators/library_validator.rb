@@ -1,3 +1,5 @@
-class Validators::LibraryValidator
+module Validators
+  class LibraryValidator
 
+  end
 end

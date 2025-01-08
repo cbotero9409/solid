@@ -1,3 +1,5 @@
-class Validators::UserValidator
+module Validators
+  class UserValidator
 
+  end
 end
