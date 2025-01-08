@@ -1,0 +1,3 @@
+class Validators::LibraryValidator
+
+end

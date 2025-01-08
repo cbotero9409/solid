@@ -1,0 +1,3 @@
+class Validators::UserValidator
+
+end
