@@ -12,7 +12,7 @@ class LoanManager
       @library.loans << Loan.new(book, user)
       @library.books.delete(book)
     else
-      book_unavailable
+      book_unavailable_es
     end
   end
 
