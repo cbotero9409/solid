@@ -5,7 +5,6 @@ class LibraryManager
 
   def initialize(library)
     @library = library
-    @book_validator = Validators::BookValidator.new
   end
 
   def register_book(book)

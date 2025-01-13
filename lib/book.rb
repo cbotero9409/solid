@@ -1,4 +1,5 @@
 require_relative 'notifications/library_notifications'
+require_relative 'validators/book_validator'
 
 # Class to represent books
 class Book
@@ -16,7 +17,7 @@ class Book
 
   private
   def validate!
-    if Validators::BookValidator.present?(self)
+    if Validators::BookValidator.validate(self)
       self
     else
       raise ArgumentError, "Invalid book data"
