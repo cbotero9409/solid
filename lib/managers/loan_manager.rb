@@ -10,7 +10,6 @@ class LoanManager
 
   def loan_book(book, user)
     if @library.books.include?(book)
-      binding.irb
       @library.loans << Loan.new(book, user)
       # @library.loans << ReferenceLoan.new(book, user)
       @library.books.delete(book)
