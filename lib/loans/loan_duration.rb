@@ -8,6 +8,10 @@ module LoanDuration
     overdue_days * per_day_rate
   end
 
+  def max_days
+    allowed_days
+  end
+
   private
 
   def allowed_days

@@ -1,4 +1,5 @@
 require_relative '../notifications/library_notifications'
+# require_relative '../loans/reference_loan'
 
 class LoanManager
   include LibraryNotifications
@@ -9,7 +10,9 @@ class LoanManager
 
   def loan_book(book, user)
     if @library.books.include?(book)
+      binding.irb
       @library.loans << Loan.new(book, user)
+      # @library.loans << ReferenceLoan.new(book, user)
       @library.books.delete(book)
     else
       book_unavailable_es
