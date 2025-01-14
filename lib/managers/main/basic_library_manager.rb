@@ -1,5 +1,5 @@
-require_relative '../notifications/library_notifications'
-require_relative 'book_management'
+require_relative '../../notifications/library_notifications'
+require_relative '../modules/book_management'
 
 class BasicLibraryManager
   include LibraryNotifications

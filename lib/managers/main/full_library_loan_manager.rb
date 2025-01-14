@@ -1,13 +1,11 @@
-require_relative '../notifications/library_notifications'
-# require_relative '../loans/reference_loan'
+require_relative 'basic_library_manager'
+require_relative '../modules/user_management'
+require_relative '../manager_interface'
 
-class LoanManager
-  include LibraryNotifications
-
-  def initialize(library)
-    @library = library
-  end
-
+class FullLibraryLoanManager < BasicLibraryManager
+  include ManagerInterface
+  include UserManagement
+  
   def loan_book(book, user)
     if @library.books.include?(book)
       @library.loans << Loan.new(book, user)
